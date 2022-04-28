@@ -18,7 +18,7 @@ $("#login").click(function () {
 });
 
 //go to sign up
-$("#signuppage").hide();
+$("#signuppage").show();
 $("#gotosignup").click(function () {
   $("#signuppage").show();
   $("#loginpage").hide();
