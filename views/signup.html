@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--HALO FRENDS-->
 <!--HALO FRENDS-->
@@ -33,41 +34,50 @@
     <!-- Navbar end -->
 
     <div class="signuplogincontents">
-   
-
-      <!-- log in section -->
-    <form method="post">
-      <div id="loginpage">
+      <!-- sign up section -->
+      <form method="post">
+      <div id="signuppage">
         <div class="content">
-          <p class="heading">Log in</p>
-
+          <p class="heading">Sign up</p>
           <div class="email">
             <div class="text">
               <p>Email</p>
-              <p>Need an account? <a href="signup.html">sign up</a></p>
+              <p>
+                Already have an account? <a href="login.html">log in</a>
+              </p>
             </div>
             <input type="textbox" name="email" id="email" />
           </div>
-
           <div class="password">
             <div class="text">
               <p>Password</p>
-              <button class="loginshowhide">
+              <button class="signupshowhide">
                 <!-- <i class="fa-solid fa-eye"></i>Show -->
                 Show
               </button>
             </div>
-            <input type="text" name="password" id="password" />
+            <input type="text" name="password" id="signuppassword" />
           </div>
 
-          <a href="userDashboard.html">
-            <input class="btn btn-sm main" type="submit" name="signup" id="login" value="Log in"/></a>
-          <p class="forgotpassword">Forgot password?</p>
+          <div class="validators">
+            <p><span></span> One lowercase character</p>
+            <p><span></span> One Uppercase character</p>
+            <p><span></span> One number</p>
+            <p><span></span> One special character</p>
+            <p><span></span> 8 characters minimum</p>
+          </div>
+
+          <input type="submit" name="signup" id="signup" value="Sign up" />
+          <p class="termsandconditions">
+            By clicking the "Sign up" button, you are creating an account, and
+            agree to DIWAR <span>Terms of Service</span> and
+            <span>Privacy Policy.</span>
+          </p>
         </div>
       </div>
     </form>
     </div>
-    <script src="/views/js/login.js"></script>
+    <script src="/views/js/signup.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>
