@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/434f997720.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>login</title>
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <div id="navbar">
+      <div class="logo">
+        <a href="main.html"
+          ><img src="/resources/image/DIWARlogo.png" alt=""
+        /></a>
+      </div>
+      <a href="main.html"><button class="close"></button></a>
+    </div>
+    <!-- Navbar end -->
+
+    <div class="signuplogincontents">
+      <!-- sign up section -->
+      <div id="signuppage">
+        <div class="content">
+          <p class="heading">Sign up</p>
+
+          <div class="email">
+            <div class="text">
+              <p>Email</p>
+              <p>
+                Already have an account? <button id="gotologin">log in</button>
+              </p>
+            </div>
+            <input type="textbox" name="email" id="email" />
+          </div>
+
+          <div class="password">
+            <div class="text">
+              <p>Password</p>
+              <button class="signupshowhide">
+                <!-- <i class="fa-solid fa-eye"></i>Show -->
+                Show
+              </button>
+            </div>
+            <input type="text" name="password" id="signuppassword" />
+          </div>
+
+          <div class="validators">
+            <p><span></span> One lowercase character</p>
+            <p><span></span> One Uppercase character</p>
+            <p><span></span> One number</p>
+            <p><span></span> One special character</p>
+            <p><span></span> 8 characters minimum</p>
+          </div>
+
+          <input type="submit" name="signup" id="signup" value="Sign up" />
+          <p class="termsandconditions">
+            By clicking the "Sign up" button, you are creating an account, and
+            agree to DIWAR <span>Terms of Service</span> and
+            <span>Privacy Policy.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- log in section -->
+      <div id="loginpage">
+        <div class="content">
+          <p class="heading">Log in</p>
+
+          <div class="email">
+            <div class="text">
+              <p>Email</p>
+              <p>Need an account? <button id="gotosignup">sign up</button></p>
+            </div>
+            <input type="textbox" name="email" id="email" />
+          </div>
+
+          <div class="password">
+            <div class="text">
+              <p>Password</p>
+              <button class="loginshowhide">
+                <!-- <i class="fa-solid fa-eye"></i>Show -->
+                Show
+              </button>
+            </div>
+            <input type="text" name="password" id="password" />
+          </div>
+
+          <a href="userDashboard.html"
+            ><input type="submit" name="signup" id="login" value="Log in"
+          /></a>
+          <p class="forgotpassword">Forgot password?</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
