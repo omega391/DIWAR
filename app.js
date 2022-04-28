@@ -10,6 +10,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views'));  
 app.use(express.json());
 app.use(cookieParser());
 
