@@ -139,6 +139,9 @@ $textColorLight: rgb(139, 139, 139);
             &:hover {
               border: solid 2px $secondaryColor;
             }
+            &.active {
+              border: solid 2px $primaryColor;
+            }
           }
           input[type="button"] {
             align-items: flex-start;

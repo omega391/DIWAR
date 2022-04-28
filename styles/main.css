@@ -781,6 +781,11 @@
   border: solid 2px #e3b707;
 }
 
+#contactus .contactuscontent .content .contactform form input.active,
+#contactus .contactuscontent .content .contactform form textarea.active {
+  border: solid 2px #083ccf;
+}
+
 #contactus .contactuscontent .content .contactform form input[type="button"] {
   -webkit-box-align: start;
       -ms-flex-align: start;
