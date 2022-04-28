@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %> 
+<body>
+    <h1>THIS IS HOME</h1>
+    
+    <form>
+        <input style="border: 0ch;" type="text" name="department" value="<%= user.department %>"/>
+        <h2>Hi, <%= user.name %></h2>
+        <input style="border: 0ch;" type="text" name="email" value="<%= user.email %>"/>
+        <h3>Daily Individual Work Accomplishedment Report</h3>
+        <label for="date">Date:</label>
+        <input type="date" name="date" required/>
+
+        <br>
+        <label for="time">Time:</label>
+        <input type="time" name="time" required/>
+        <br>
+
+        <label for="output">Output for the day:</label>
+        <input type="text" name="output" required/>
+        <br>
+
+        <label for="details">Details of the output:</label>
+        <input type="text" name="details" required/>
+        <br>
+
+        <label for="verify">Means of verification:</label>
+        <input type="text" name="verify" required/>
+        <br>
+        <button>Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            //getthe values from the form
+            const email = form.email.value;
+            const date = form.date.value;
+            const time  = form.time.value;
+            const output  = form.output.value;
+            const details = form.details.value;
+            const verify = form.verify.value;
+            const department = form.department.value;
+
+           try{
+               const res = await fetch('/diwar', {
+                   method:'POST',
+                   body: JSON.stringify({
+                       email,
+                       date,
+                       time,
+                       output,
+                       details,
+                       verify,
+                       department,
+                   }),
+                   headers: {'Content-Type':'application/json'}
+               });
+               const data = await res.json();
+               console.log(data);
+               if (data.errors) {
+                    //someting went wrong
+               }
+               //redirect to main account
+               if (data.user) {
+                   //success
+                   alert('Submitted Successfully')
+                  
+               }
+           }
+           catch (err) {
+               console.log(err);
+           }
+        });
+    </script>
+    <a href = '/logout'>
+        <button id="button">
+            logout
+        </button>
+    </a>
+        <h2>sample</h2>    
+</body>
+</html>
